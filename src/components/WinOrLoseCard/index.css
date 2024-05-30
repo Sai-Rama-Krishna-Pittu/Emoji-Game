@@ -1,0 +1,94 @@
+/* Write your code here. */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.game-result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff33;
+  border: 3px solid #ffffff;
+  margin: 50px 40px;
+  border-radius: 40px;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.game-result-image {
+  width: 35vw;
+  margin-bottom: 20px;
+}
+
+.game-result-heading {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+.game-result-score-description {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.game-result-score {
+  font-size: 30px;
+  color: #6a59ff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.game-result-button {
+  background-color: #ffce27;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  
+  .game-result-container {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 40px;
+    border-radius: 40px;
+    padding: 20px;
+    text-align: center;
+    width: 40vw;
+    align-self: center;
+  }
+
+  .game-result-image {
+    width: 20vw;
+    margin-left: 20px;
+    order: 1;
+  }
+
+  .game-result-heading {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 30px;
+  }
+  .game-result-score-description {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+  .game-result-score {
+    font-size: 40px;
+    color: #6a59ff;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .game-result-button {
+    background-color: #ffce27;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
