@@ -1,87 +1,72 @@
-In this project, let's build an **Emoji Game** by applying the concepts we have learned till now.
+# Emoji Game
 
-### Refer to the image below:
+Welcome to the Emoji Game! This is a fun and interactive game built with React. The game involves clicking on unique emojis to score points. The goal is to click all emojis without repeating any. Enjoy playing and see if you can achieve the highest score!
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/emoji-game-output-v2.gif" alt="emoji-game-output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+## How to Play
 
-### Design Files
+1. Initially, the **Score** and **Total Score** are set to **0**.
+2. Click on an **Emoji**:
+   - If the emoji has not been clicked before, the **Score** increments by one.
+   - If all emojis are clicked exactly once, the **Won Game** view is displayed.
+   - If an emoji is clicked more than once, the **Lose Game** view is displayed.
+   - If the score achieved in the current game is higher than the previous scores, the **Top Score** is updated.
+3. Click the **Play Again** button to restart the game. The **Score** resets, but the **Top Score** remains unchanged.
 
-<details>
-<summary>Click to view</summary>
+![Emoji Game Output](https://assets.ccbp.in/frontend/content/react-js/emoji-game-output-v2.gif)
 
-- [Extra Small (Size < 576px), Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/emoji-game-sm-outputs.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Game View](https://assets.ccbp.in/frontend/content/react-js/emoji-game-lg-output-v2.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Won Game](https://assets.ccbp.in/frontend/content/react-js/emoji-game-won-game-lg-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Lose Game](https://assets.ccbp.in/frontend/content/react-js/emoji-game-lose-game-lg-output.png)
+## Game Views
 
-</details>
+### Extra Small (Size < 576px), Small (Size >= 576px)
+![Game View - Small](https://assets.ccbp.in/frontend/content/react-js/emoji-game-sm-outputs.png)
 
-### Set Up Instructions
+### Medium (Size >= 768px), Large (Size >= 992px), Extra Large (Size >= 1200px)
+- Game View
+  ![Game View - Large](https://assets.ccbp.in/frontend/content/react-js/emoji-game-lg-output-v2.png)
+- Won Game
+  ![Won Game View](https://assets.ccbp.in/frontend/content/react-js/emoji-game-won-game-lg-output.png)
+- Lose Game
+  ![Lose Game View](https://assets.ccbp.in/frontend/content/react-js/emoji-game-lose-game-lg-output.png)
 
-<details>
-<summary>Click to view</summary>
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+## Getting Started
 
-### Completion Instructions
+### Prerequisites
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+- Node.js
+- npm (Node Package Manager)
 
-The app must have the following functionalities
+### Installation
 
-- Initially, the _Score_ and _Total Score_ for the current game should be **0**
-- When an **Emoji** is clicked,
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Sai-Rama-Krishna-Pittu/Emoji-Game.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd Emoji-Game
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-  - If it is not the same as any of the previously clicked emojis, then the _Score_ should be incremented by one
-  - If all the emojis are clicked exactly once
+### Running the Game
 
-    - [Won Game](https://assets.ccbp.in/frontend/content/react-js/emoji-game-won-game-lg-output.png) view should be displayed
+Start the development server:
+```sh
+npm start
+```
+The game will be available at `http://localhost:3000`.
 
-  - If it is the same as any of the previously clicked emojis
-    - [Lose Game](https://assets.ccbp.in/frontend/content/react-js/emoji-game-lose-game-lg-output.png) view should be displayed
-  - If the score achieved in the current game is higher than the previous scores then the _Top Score_ should be updated accordingly
+## Components Structure
 
-- When the _Play Again_ button is clicked, then we should be able to play the game again
-  - The _Score_ value should be reset but not the _Top Score_ value
-- The `EmojiGame` component receives the `emojisList` as a prop. It consists of a list of emoji objects with the following properties in each emoji object
+### Game View Component Breakdown
+![Game View Component Breakdown](https://assets.ccbp.in/frontend/content/react-js/emoji-game-game-view-component-breakdown-structure.png)
 
-  |    Key    | Data Type |
-  | :-------: | :-------: |
-  |    id     |  Number   |
-  | emojiName |  String   |
-  | emojiUrl  |  String   |
+### Win/Lose View Component Breakdown
+![Win/Lose View Component Breakdown](https://assets.ccbp.in/frontend/content/react-js/emoji-game-win-lose-component-breakdown-structure.png)
 
-</details>
-
-<details>
-<summary>Components Structure</summary>
-
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/emoji-game-game-view-component-breakdown-structure.png" alt="emoji game view component breakdown structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/emoji-game-win-lose-component-breakdown-structure.png" alt="emoji game win or lose component breakdown structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
+## Implementation Files
 
 - `src/components/EmojiGame/index.js`
 - `src/components/EmojiGame/index.css`
@@ -91,87 +76,57 @@ Use these files to complete the implementation:
 - `src/components/EmojiCard/index.css`
 - `src/components/WinOrLoseCard/index.js`
 - `src/components/WinOrLoseCard/index.css`
-</details>
 
-### Quick Tips
+## Quick Tips
 
-<details>
-<summary>Click to view</summary>
-<br>
-
-- You can use the `cursor` CSS property to specify the mouse cursor to be displayed when pointing over an element
-
+- Use the `cursor` CSS property to specify the mouse cursor to be displayed when pointing over an element:
+  ```css
+  cursor: pointer;
   ```
-    cursor: pointer;
+- Use the `outline` CSS property for buttons and input elements to remove the highlighting when the elements are clicked:
+  ```css
+  outline: none;
   ```
 
-  <br/>
-   <img src="https://assets.ccbp.in/frontend/content/react-js/cursor-pointer-img.png" alt="cursor pointer" style="width:100px" />
+## Important Note
 
-- You can use the below `outline` CSS property for buttons and input elements to remove the highlighting when the elements are clicked
+**The following instructions are required for the tests to pass:**
+- The emojis should have the `alt` attribute as the value of the key `emojiName` from each emoji object.
 
-  ```
-    outline: none;
-  ```
+## Resources
 
-</details>
+### Image URLs
 
-### Important Note
+- Game Logo: [https://assets.ccbp.in/frontend/react-js/game-logo-img.png](https://assets.ccbp.in/frontend/react-js/game-logo-img.png)
+  - alt: **emoji logo**
+- Won Game Image: [https://assets.ccbp.in/frontend/react-js/won-game-img.png](https://assets.ccbp.in/frontend/react-js/won-game-img.png)
+- Lose Game Image: [https://assets.ccbp.in/frontend/react-js/lose-game-img.png](https://assets.ccbp.in/frontend/react-js/lose-game-img.png)
 
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- The emojis should have the alt as the value of the key `emojiName` from each emoji object
-
-</details>
-
-### Resources
-
-<details>
-<summary>Image URLs</summary>
-
-- [https://assets.ccbp.in/frontend/react-js/game-logo-img.png](https://assets.ccbp.in/frontend/react-js/game-logo-img.png) alt should be **emoji logo**
-- [https://assets.ccbp.in/frontend/react-js/won-game-img.png](https://assets.ccbp.in/frontend/react-js/won-game-img.png)
-- [https://assets.ccbp.in/frontend/react-js/lose-game-img.png](https://assets.ccbp.in/frontend/react-js/lose-game-img.png)
-
-</details>
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #6a59ff ; width: 150px; padding: 10px; color: white">Hex: #6a59ff</div>
-<div style="background-color: #ffffff ; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #3d3d3d ; width: 150px; padding: 10px; color: white">Hex: #3d3d3d</div>
+### Colors
 
 #### Background Colors
-
-<div style="background-color: #9796f0 ; width: 150px; padding: 10px; color: white">Hex: #9796f0</div>
-<div style="background-color: #fbc7d4 ; width: 150px; padding: 10px; color: black">Hex: #fbc7d4</div>
-<div style="background-color: #ffffff33 ; width: 150px; padding: 10px; color: black">Hex: #ffffff33</div>
-<div style="background-color: #ffce27 ; width: 150px; padding: 10px; color: black">Hex: #ffce27</div>
+- Hex: #6a59ff
+- Hex: #ffffff
+- Hex: #3d3d3d
+- Hex: #9796f0
+- Hex: #fbc7d4
+- Hex: #ffffff33
+- Hex: #ffce27
 
 #### Border Colors
+- Hex: #ffffff30
 
-<div style="background-color: #ffffff30 ; width: 150px; padding: 10px; color: black">Hex: #ffffff30</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
+### Font Families
 - Roboto
 
-</details>
+## License
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+Have fun playing the Emoji Game! This is a small project meant to showcase my skills and passion for web development. Feel free to explore the code and suggest improvements.
+
+---
+
+*This project is done for fun and to showcase a small kind of project on GitHub.*
